@@ -1,7 +1,8 @@
 public class ExpressionParser {
 
     public static void main(String[] args) {
-        String input = "2*{3+4}-5*{1+5-10}";
+//        String input = "2*{3+4}-5*{1+5-10}";
+        String input = args[0];
         ExpressionParser parser = new ExpressionParser();
         ParseResult parseResult = parser.parseExpression(input, 0);
         System.out.println("Evaluated Result: " + parser.evaluate(parseResult.node));
